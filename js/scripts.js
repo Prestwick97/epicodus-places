@@ -39,6 +39,12 @@ function Place(location, landmark, year) {
   this.landmark = landmark;
   this.year = year;
 }
-Place.prototype.info =function() {
+Place.prototype.info = function() {
   return this.location + " " + this.landmark + " " + this.year;
 }
+// User Logic
+// $(document).ready(function(){
+//   $("#").click(function(){
+  
+//   });
+// })
