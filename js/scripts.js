@@ -39,12 +39,41 @@ function Place(location, landmark, year) {
   this.landmark = landmark;
   this.year = year;
 }
+
+
 Place.prototype.info = function() {
   return this.location + " " + this.landmark + " " + this.year;
 }
+
+var placeBook = new PlaceBook();
+var France = new Place("Paris", "Eifel Tower", "January 2019");
+var Germany = new Place("Berlin", "Reichstag", "March 2019");
+var England = new Place("London", "Big Ben", "April 2019");
+var Italy = new Place("Rome", "Colossem", "May 2019");
+placeBook.addPlace(France);
+placeBook.addPlace(Germany);
+placeBook.addPlace(England);
+placeBook.addPlace(Italy);
+
+
 // User Logic
-// $(document).ready(function(){
-//   $("#").click(function(){
+
+$(document).ready(function() {
   
-//   });
-// })
+  $("#france").click(function() {
+    // event.preventDefault(); doesnt toggle, who cares?
+  $("#france").text(France.info()).fadeIn();
+  });
+  $("#germany").click(function() {
+  $("#germany").text(Germany.info()).fadeIn();
+  });
+  $("#england").click(function() {
+    $("#england").text(England.info()).fadeIn();
+    });
+    $("#italy").click(function() {
+      $("#italy").text(Italy.info()).fadeIn();
+      });
+
+
+
+});
